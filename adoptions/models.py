@@ -9,7 +9,7 @@ class Pet(models.Model):
    description = models.TextField()
    sex = models.CharField(choices=SEX_CHOICES, max_length=1, blank=True)
    submission_date = models.DateTimeField()
-   age = models.IntegerField(null=True)
+   age = models.PositiveIntegerField(null=True)
    vaccinations = models.ManyToManyField('Vaccine', blank=True)
 
 
